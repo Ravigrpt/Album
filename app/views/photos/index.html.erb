@@ -1,0 +1,17 @@
+<h3>Photos</h3>
+<table style="width:100%;background-colour:yellow;" bordar="1">
+	<th>Name</th>
+	<th>Title</th>
+	<th>Description</th>
+	<% @photos.each do |photo| %>
+  <tr>
+  	 <td><%= link_to phto.name, photo_path(photo.id) %></td>
+  	 <td><%= photo.title %></td>
+  	 <td><%= photo.description %></td>
+
+  </tr>
+
+  	<% end %>
+
+ </table>
+				

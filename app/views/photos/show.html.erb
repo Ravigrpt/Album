@@ -1,0 +1,10 @@
+<%= @photo.name %>
+<%= @photo.title %>
+<%= @photo.description %><br/>
+<%= @photo.album.name %></br>
+<%= image_tag @photo.image.url(:small) %><br/>
+<h3>Comments</h3>
+<% @photo.comments.each do |comment| %>
+	<%= comment.message %></br>
+<% end %><br/>
+<%= render :partial => "comments/form", :locals => { :photo_id => @photo.id} %>
